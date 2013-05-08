@@ -14,6 +14,9 @@ public class Welcome extends JavaPlugin implements Listener {
 		// I hate getting players from events, so I get their player info from the server instead.
 		Player player = Bukkit.getServer().getPlayerExact(event.getPlayer().getName());
 		
+		// Log to console that a player joined
+		getLogger().info("PleaPVP - " + player.getName() + " joined.");
+		
 		// Set the Player's Texture Pack to the Server Texture
 		player.setTexturePack("http://www.xboxjtag.com/JehkobasFantasy.zip");
 		
