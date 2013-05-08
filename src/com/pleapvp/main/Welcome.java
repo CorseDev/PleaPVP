@@ -3,19 +3,18 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class Welcome extends JavaPlugin implements Listener {
-	@EventHandler
-	public void onJoinEvent(PlayerJoinEvent event){
+	
+	@EventHandler(priority = EventPriority.HIGH)
+	public void onJoinEvent(PlayerJoinEvent event) {
 		// I hate getting players from events, so I get their player info from the server instead.
 		Player player = Bukkit.getServer().getPlayerExact(event.getPlayer().getName());
-		
-		// Log to console that a player joined
-		getLogger().info("PleaPVP - " + player.getName() + " joined.");
 		
 		// Set the Player's Texture Pack to the Server Texture
 		player.setTexturePack("http://www.xboxjtag.com/JehkobasFantasy.zip");

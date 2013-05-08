@@ -7,6 +7,7 @@ public class Plugin extends JavaPlugin {
     @Override
     public void onEnable(){
     	getLogger().info("Enabled Sucessfully.");
+    	getServer().getPluginManager().registerEvents(new Welcome(), this);
     }
  
     @Override

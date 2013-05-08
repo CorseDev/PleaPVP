@@ -3,11 +3,12 @@ version: 1
 description: PleaPVP Plugin
 author: TTGX12
 main: com.pleapvp.main.Plugin
+
 permissions:
   pleapvp.owner:
     description: PleaPVP Owner Permissions
     default: op
-  pleapvp.owner:
+  pleapvp.admin:
     description: PleaPVP Admin Permissions
   pleapvp.normplayer:
     description: PleaPVP Member Permissions
