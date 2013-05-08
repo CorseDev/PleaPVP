@@ -1,8 +1,9 @@
 package com.pleapvp.main;
 
+
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class main extends JavaPlugin {
+public class Plugin extends JavaPlugin {
     @Override
     public void onEnable(){
     	getLogger().info("Enabled Sucessfully.");
