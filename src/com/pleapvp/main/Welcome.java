@@ -1,9 +1,7 @@
 package com.pleapvp.main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Effect;
 import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -18,10 +16,6 @@ public class Welcome extends JavaPlugin implements Listener {
 	public void onJoinEvent(PlayerJoinEvent event, Location loc) {
 		// I hate getting players from events, so I get their player info from the server instead.
 		Player player = Bukkit.getServer().getPlayerExact(event.getPlayer().getName());
-		
-		// Play a Ghast Shriek (for fun!)
-		World world = loc.getWorld();
-        world.playEffect(loc, Effect.GHAST_SHRIEK, 5);
 		
 		// Set the Player's Texture Pack to the Server Texture
 		player.setTexturePack("http://www.xboxjtag.com/JehkobasFantasy.zip");
