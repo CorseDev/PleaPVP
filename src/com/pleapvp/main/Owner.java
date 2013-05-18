@@ -12,6 +12,6 @@ public class Owner extends JavaPlugin implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		// Tell staff the IP Address of the player; prevents two accounts on one IP.
 		Player player = event.getPlayer();
-		Bukkit.broadcast(ChatColor.GRAY + player.getName() + "'s IP: " + player.getAddress(), "pleapvp.owner");
+		Bukkit.getServer().broadcast(ChatColor.GRAY + player.getName() + "'s IP: " + player.getAddress(), "pleapvp.owner");
 	}
 }
