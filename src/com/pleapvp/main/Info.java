@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Info extends JavaPlugin implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		Player player = Bukkit.getPlayerExact(args[0]);
-		if(cmd.getName().equalsIgnoreCase("info")){ // If the player typed /basic then do the following...
+		if(cmd.getName().equalsIgnoreCase("info")){ 
 			if (args.length == 1) {
 				sender.sendMessage(ChatColor.GOLD + "======== " + ChatColor.GRAY + args[0] + ChatColor.GOLD + "========");
 				if(player == null) {
@@ -32,8 +32,8 @@ public class Info extends JavaPlugin implements CommandExecutor {
 				
 			}
 			return true;
-		} //If this has happened the function will return true. 
-	        // If this hasn't happened the a value of false will be returned.
+		} 
+		
 		return false; 
 	}
 }
